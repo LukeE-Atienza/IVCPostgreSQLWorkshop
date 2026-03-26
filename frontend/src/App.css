@@ -1,0 +1,233 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Main container */
+.app-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.content-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* Glass Header */
+.glass-header {
+  margin-bottom: 32px;
+  padding: 32px;
+  text-align: center;
+  background: rgba(59, 130, 246, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+}
+
+.main-title {
+  font-family: "Inter";
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #2563eb;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: "inter";
+  color: #4b5563;
+  font-size: 1.125rem;
+  margin-top: 12px;
+}
+
+/* Whiteboard Card */
+.whiteboard-card {
+  padding: 32px;
+  border-radius: 8px;
+  background: #fafaf9;
+  border: 3px solid #e7e5e4;
+  position: relative;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+.habit-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d1d5db;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.habit-table thead tr {
+  background-color: #f9fafb;
+}
+
+.habit-table th {
+  border: 1px solid #d1d5db;
+  padding: 16px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 1.25rem;
+}
+
+.habit-table th.habit-col {
+  text-align: left;
+  width: 200px;
+}
+
+.habit-table th.day-col {
+  text-align: center;
+  width: 100px;
+}
+
+.habit-table th.completion-col {
+  text-align: center;
+  width: 100px;
+}
+
+.habit-table th.delete-col {
+  width: 60px;
+}
+
+.habit-table tbody tr {
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.habit-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.habit-table td {
+  border: 1px solid #d1d5db;
+}
+
+.habit-table td.habit-name {
+  padding: 16px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 1.125rem;
+}
+
+.habit-table td.day-cell {
+  padding: 0;
+}
+
+.habit-table td.completion-cell {
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  color: #374151;
+  font-size: 1.125rem;
+}
+
+.habit-table td.delete-cell {
+  padding: 8px;
+  text-align: center;
+}
+
+/* Day completion button */
+.day-button {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background-color: white;
+  border: none;
+  min-height: 64px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.day-button.completed {
+  background-color: #22c55e;
+}
+
+.day-button-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(0, 0, 0, 0.3) 10px,
+    rgba(0, 0, 0, 0.3) 12px
+  );
+}
+
+/* Delete button */
+.delete-button {
+  padding: 8px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #f3f4f6;
+}
+
+.delete-icon {
+  width: 16px;
+  height: 16px;
+  color: #9ca3af;
+}
+
+/* Add Habit Form */
+.add-habit-form {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.habit-input {
+  flex: 1;
+  padding: 8px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+  font-family: "inter";
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.habit-input:focus {
+  border-color: #3b82f6;
+}
+
+.add-button {
+  padding: 8px 24px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.add-button:hover {
+  background-color: #2563eb;
+}
+
+.add-button-icon {
+  width: 16px;
+  height: 16px;
+}
