@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from "express";
 import cors from "cors";
 import pg from "pg";
@@ -10,6 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 //database connection
+
 
 //check if this is working
 app.get("/api/status", (req, res) => {
